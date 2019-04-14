@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Hello world2</h1>
+        <h1>Unicornios</h1>
         <hr/>
         <Link to="/home">Home</Link>
         <Link to="/about">About</Link>
