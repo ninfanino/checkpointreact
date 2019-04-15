@@ -3,8 +3,9 @@ import Button from './Button'
 
 const CardListItem = (props) => {
   let {image, text, unicorn, id} = props
+  console.log({image})
   return(
-    <div class="cardItem">
+    <div className="cardItem">
       <h2>{unicorn}</h2>
       <figure>
         <img src={image}/>
