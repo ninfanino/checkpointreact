@@ -14,7 +14,10 @@ const Header = (props) => {
       {/* <Link to="/view/1">View</Link>
       <Link to="/view/2">View</Link> */}
       <hr/>
-      <Route path="/home" component={Home}/>
+      <Route
+        path='/home'
+        render={(props) => <Home {...props} isAuthed={true} />}
+      />
       <Route path="/about" component={About}/>
       {/* <Route path="/view/:id" component={View}/> */}
     </div>
