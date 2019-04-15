@@ -13,11 +13,13 @@ const CardList = (props) =>{
         unicorn='Gaticornio'
         image={gaticornio}
         text={gaticorniotxt}
+        id='1'
       />
       <CardListItem
         unicorn='Ornitorrincornio'
         image={ornitorrincornio}
         text={ornitorrincorniotxt}
+        id='2'
       />
     </div>
   )

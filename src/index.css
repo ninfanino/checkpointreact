@@ -12,3 +12,6 @@ body {
     font-family: 'Handlee', cursive;
 }
 
+.cardItem {
+    border: solid red 1px;
+}
