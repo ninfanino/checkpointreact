@@ -1,25 +1,46 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
-import Home from './Home';
-import About from './About';
+import { Route } from 'react-router-dom';
+import Header from './Header'
 import View from './View';
 
+
+import gaticornio from '../Images/gaticornio.jpg'
+import gaticorniotxt from '../Legends/gaticornio.txt'
+import ornitorrincornio from '../Images/ornitorrincornio.jpg'
+import ornitorrincorniotxt from '../Legends/gaticornio.txt'
+
 class App extends Component {
+
+  constructor(props){
+    super(props)
+    this.state = {
+      list: [
+        {  
+          unicorn: 'Gaticornio',
+          image:'./gaticornio.jpg',
+          text:'./gaticornio.txt',
+          id:'1',
+          comments: []
+        },
+        {
+          unicorn: 'Ornitorrincornio',
+          image:'./ornitorrincornio.jpg',
+          text:'./gaticornio.txt',
+          id:'2',
+          comments: []
+        }
+      ],
+      task: ''
+    }    
+  }
+
   render() {
-    return (
-      <div>
-        <h1>Hello world2</h1>
-        <hr/>
-        <Link to="/home">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/view/1">View</Link>
-        <Link to="/view/2">View</Link>
-        <hr/>
-        <Route path="/home" component={Home}/>
-        <Route path="/about" component={About}/>
-        <Route path="/view/:id" component={View}/>
-      </div>
-    );
+      return (
+        <Header 
+        clickHandler={this.goToView}
+        list={this.state.list}
+        />
+      );
   }
 }
 
