@@ -1,19 +1,34 @@
 import React from 'react'
+import { Route, Link } from 'react-router-dom';
 import Button from './Button'
+import View from './View'
 
 const CardListItem = (props) => {
-  let {image, text, unicorn, id} = props
-  console.log({image})
+  let {item, clickHandler} = props
+  console.log('CardListItem: ', item, item.image, item.text )
   return(
     <div className="cardItem">
-      <h2>{unicorn}</h2>
+      <h2>{item.unicorn}</h2>
       <figure>
-        <img src={image}/>
+        <img src={require(`${item.image}`)} 
+        //"../Images/gaticornio.jpg"
+        //{item.image}
+        />
       </figure>
-      <object data={text}></object>
+      <object data={require(`${item.text}`)}></object>
       <Button>
-        Vé a {unicorn}
+        Vé a 
+        <Link to={`/view/${item.id}`}> {item.unicorn}</Link>
+        {/* <Route 
+          //path={`/view/${item.id}`}
+          path="/view/:id"
+          render={(props) => 
+            <View {...props} 
+              item={item} clickHandler={clickHandler} 
+            />}
+        /> */}
       </Button>
+      {/* <Route path="/view/:id" component={View}/> */}
     </div>
   )
 }
