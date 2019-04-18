@@ -1,3 +1,17 @@
+/*
+Imported google fonts
+font-family: 'Pacifico', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Bree Serif', serif;
+font-family: 'Marck Script', cursive;
+font-family: 'Handlee', cursive; */
+
 body {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Handlee', cursive;
+}
+
+.cardItem {
+    border: solid red 1px;
 }
