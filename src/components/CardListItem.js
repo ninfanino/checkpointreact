@@ -16,7 +16,7 @@ const CardListItem = (props) => {
         />
       </figure>
       <object data={require(`${item.text}`)}></object>
-      <Button>
+      <div className="button">
         Vé a 
         <Link to={`/view/${item.id}`}> {item.unicorn}</Link>
         {/* <Route 
@@ -27,7 +27,7 @@ const CardListItem = (props) => {
               item={item} clickHandler={clickHandler} 
             />}
         /> */}
-      </Button>
+      </div>
       {/* <Route path="/view/:id" component={View}/> */}
     </div>
   )
