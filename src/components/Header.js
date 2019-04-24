@@ -9,13 +9,26 @@ const Header = (props) => {
   console.log('Header props', props)
   return(
     <div>
-      <h1>Unicornios</h1>
-      <hr/>
-      <Link to="/home">Home</Link>
-      <Link to="/about">About</Link>
+      <div className="header">
+        <Link to="/home">
+          <img src="../assets/logo.png" className="logo-img" />
+          <span className="logo-name">Unicornios</span>
+        </Link>
+        
+        <div className="menu">
+          <Link to="/home">Home</Link>
+          <Link to="/about">About</Link>
+        </div>
+      </div>
       {/* <Link to="/view/1">View</Link>
       <Link to="/view/2">View</Link> */}
-      <hr/>
+      
+      <Route
+        exact path='/'
+        render={(props) => <Home {...props} 
+        list={list} clickHandler={clickHandler} 
+        />}
+      />
       <Route
         path='/home'
         render={(props) => <Home {...props} 
@@ -32,6 +45,7 @@ const Header = (props) => {
               list={list} clickHandler={clickHandler} 
             />}
         />
+      
     </div>
   )
 }

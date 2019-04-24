@@ -8,6 +8,7 @@ const View = (props) => {
 	let item = list[index]
 
 	return (
+		<div className="home-intro view">
 		<div className="cardItem">
       <h2>{item.unicorn}</h2>
       <figure>
@@ -21,6 +22,7 @@ const View = (props) => {
 					Los comentarios van aqui!!
 				</div>
 			</div>
+    </div>
     </div>
 	)
 }
