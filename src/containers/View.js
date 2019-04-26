@@ -1,4 +1,7 @@
 import React from 'react'
+import Textarea from '../components/comments/Textarea'
+import Button from '../components/comments/Button'
+import Comments from '../containers/Comments'
 
 const View = (props) => {
 	let {list, clickHandler} = props
@@ -18,9 +21,10 @@ const View = (props) => {
       <object data={item.text}></object>
 			<div>
 				<h2>Deja tu comentario:</h2>
-				<div>
-					Los comentarios van aqui!!
-				</div>
+				<Textarea/>
+				<Button />
+
+				<Comments />
 			</div>
     </div>
     </div>
