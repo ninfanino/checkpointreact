@@ -3,12 +3,6 @@ import { Route } from 'react-router-dom';
 import Header from './Header'
 import View from './View';
 
-
-import gaticornio from '../Images/gaticornio.jpg'
-import gaticorniotxt from '../Legends/gaticornio.txt'
-import ornitorrincornio from '../Images/ornitorrincornio.jpg'
-import ornitorrincorniotxt from '../Legends/gaticornio.txt'
-
 class App extends Component {
 
   constructor(props){
@@ -17,15 +11,15 @@ class App extends Component {
       list: [
         {  
           unicorn: 'Gaticornio',
-          image:'./gaticornio.jpg',
-          text:'./gaticornio.txt',
+          image:'../../../../public/assets/gaticornio.jpg',
+          text:'../assets/gaticornio.txt',
           id:'1',
           comments: []
         },
         {
           unicorn: 'Ornitorrincornio',
-          image:'./ornitorrincornio.jpg',
-          text:'./gaticornio.txt',
+          image:'../assets/ornitorrincornio.jpg',
+          text:'../assets/gaticornio.txt',
           id:'2',
           comments: []
         }
@@ -35,6 +29,8 @@ class App extends Component {
   }
 
   render() {
+    console.log('Abriendo el App');
+    
       return (
         <Header 
         clickHandler={this.goToView}

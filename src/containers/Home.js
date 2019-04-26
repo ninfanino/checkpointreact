@@ -1,5 +1,5 @@
 import React from 'react'
-import CardList from './CardList'
+import CardList from '../components/cardList/CardList'
 
 const Home = (props) => {
 	let {list, clickHandler}=props
