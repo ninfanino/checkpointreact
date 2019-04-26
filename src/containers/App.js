@@ -11,7 +11,7 @@ class App extends Component {
       list: [
         {  
           unicorn: 'Gaticornio',
-          image:'../../../../public/assets/gaticornio.jpg',
+          image:'../assets/gaticornio.jpg',
           text:'../assets/gaticornio.txt',
           id:'1',
           comments: []
