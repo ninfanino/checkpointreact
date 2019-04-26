@@ -12,10 +12,10 @@ const View = (props) => {
 		<div className="cardItem">
       <h2>{item.unicorn}</h2>
       <figure>
-        <img src={require(`${item.image}`)} 
+        <img src={item.image} 
         />
       </figure>
-      <object data={require(`${item.text}`)}></object>
+      <object data={item.text}></object>
 			<div>
 				<h2>Deja tu comentario:</h2>
 				<div>

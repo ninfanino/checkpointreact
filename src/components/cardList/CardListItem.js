@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom';
-import Button from './Button'
-import View from './View'
+import Button from '../Button'
+
 
 const CardListItem = (props) => {
   let {item, clickHandler} = props
@@ -10,12 +10,12 @@ const CardListItem = (props) => {
     <div className="cardItem">
       <h2>{item.unicorn}</h2>
       <figure>
-        <img src={require(`${item.image}`)} 
+        <img src={item.image}
         //"../Images/gaticornio.jpg"
         //{item.image}
         />
       </figure>
-      <object data={require(`${item.text}`)}></object>
+      <object data={item.text}></object>
       <div className="button">
         Vé a 
         <Link to={`/view/${item.id}`}> {item.unicorn}</Link>
