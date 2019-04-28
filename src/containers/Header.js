@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, NavLink } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import View from './View'
@@ -14,38 +14,26 @@ const Header = (props) => {
           <img src="../assets/logo.png" className="logo-img" />
           <span className="logo-name">Unicornios</span>
         </Link>
-        
         <div className="menu">
-          <Link to="/home">Home</Link>
-          <Link to="/about">About</Link>
+          <NavLink to="/home" activeClassName="isSelected">Home</NavLink>
+          <NavLink to="/about" activeClassName="isSelected">About</NavLink>
         </div>
       </div>
-      {/* <Link to="/view/1">View</Link>
-      <Link to="/view/2">View</Link> */}
-      
+
       <Route
-        exact path='/'
+        exact path={["/", "/home"]}
         render={(props) => <Home {...props} 
         list={list} clickHandler={clickHandler} 
         />}
       />
-      <Route
-        path='/home'
-        render={(props) => <Home {...props} 
-        list={list} clickHandler={clickHandler} 
-        />}
-      />
-      <Route path="/about" component={About}/>
-      {/* <Route path="/view/:id" component={View}/> */}
+      <Route exact path="/about" component={About}/>
       <Route 
-          //path={`/view/${item.id}`}
-          path="/view/:id"
+          path={["/view/:id", "/unicorn/:id", "/view/:unicornio" ]}
           render={(props) => 
             <View {...props} 
               list={list} clickHandler={clickHandler} 
             />}
         />
-      
     </div>
   )
 }
