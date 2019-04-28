@@ -5,6 +5,7 @@ import Comments from '../containers/Comments'
 
 const View = (props) => {
 	let {list, clickHandler} = props
+	console.log(props)
 	console.log(props.match.params.id);
 	let index = props.match.params.id - 1
 	console.log('View List: ', list[index])

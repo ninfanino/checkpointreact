@@ -14,38 +14,26 @@ const Header = (props) => {
           <img src="../assets/logo.png" className="logo-img" />
           <span className="logo-name">Unicornios</span>
         </Link>
-        
         <div className="menu">
           <Link to="/home">Home</Link>
           <Link to="/about">About</Link>
         </div>
       </div>
-      {/* <Link to="/view/1">View</Link>
-      <Link to="/view/2">View</Link> */}
-      
+
       <Route
-        exact path='/'
+        exact path={["/", "/home"]}
         render={(props) => <Home {...props} 
         list={list} clickHandler={clickHandler} 
         />}
       />
-      <Route
-        path='/home'
-        render={(props) => <Home {...props} 
-        list={list} clickHandler={clickHandler} 
-        />}
-      />
-      <Route path="/about" component={About}/>
-      {/* <Route path="/view/:id" component={View}/> */}
+      <Route exact path="/about" component={About}/>
       <Route 
-          //path={`/view/${item.id}`}
-          path="/view/:id"
+          path={["/view/:id", "/unicorn/:id", "/view/:unicornio" ]}
           render={(props) => 
             <View {...props} 
               list={list} clickHandler={clickHandler} 
             />}
         />
-      
     </div>
   )
 }
