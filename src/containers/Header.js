@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, NavLink } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import View from './View'
@@ -15,8 +15,8 @@ const Header = (props) => {
           <span className="logo-name">Unicornios</span>
         </Link>
         <div className="menu">
-          <Link to="/home">Home</Link>
-          <Link to="/about">About</Link>
+          <NavLink to="/home" activeClassName="isSelected">Home</NavLink>
+          <NavLink to="/about" activeClassName="isSelected">About</NavLink>
         </div>
       </div>
 

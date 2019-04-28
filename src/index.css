@@ -57,7 +57,9 @@ a:hover {
 	margin-right: 10px;
 	text-decoration: none;
 }
- 
+.isSelected{
+	font-weight: bold;
+}
 .home-intro {
 	padding: 0px 20px;
 }
