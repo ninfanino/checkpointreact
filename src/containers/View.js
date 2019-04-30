@@ -4,7 +4,8 @@ import Button from '../components/comments/Button'
 import Comments from '../containers/Comments'
 
 const View = (props) => {
-	let {list, clickHandler} = props
+	let {list, inputHandler, clickHandler, taskValue} = props
+
 	console.log(props)
 	console.log(props.match.params.id);
 	let index = props.match.params.id - 1
@@ -22,8 +23,13 @@ const View = (props) => {
       <object data={item.text}></object>
 			<div>
 				<h2>Deja tu comentario:</h2>
-				<Textarea/>
-				<Button />
+				<Textarea
+				inputHandler={inputHandler}
+        taskValue={taskValue}/>
+				<Button clickHandler={clickHandler}>
+          
+				
+				</Button>
 
 				<Comments />
 			</div>
