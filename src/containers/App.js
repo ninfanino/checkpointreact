@@ -39,7 +39,7 @@ class App extends Component {
     }
   // update.this.state.task
   }
-  
+
   // Agregar función para añadir comentario
 addTaskToList=()=>{
   // add task to this.state.list
@@ -103,8 +103,6 @@ removeItemFromList=(index)=>{
         
         <Comments
           listItems={this.state.list}
-          removeItemFromList={this.removeItemFromList} 
-          markTaskCompleted={this.markTaskCompleted}
           likeSubmitter={this.likeSubmitter}
           />
       </div>
