@@ -32,8 +32,8 @@ const View = (props) => {
 				</Button>
 
 				<Comments 
-				listItems={this.state.list}
-				likeSubmitter={this.likeSubmitter}/>
+				listItems={list}
+				likeSubmitter={likeSubmitter}/>
 			</div>
     </div>
     </div>
