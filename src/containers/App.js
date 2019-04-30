@@ -60,14 +60,6 @@ addTaskToList=()=>{
   
 }
 
-removeItemFromList=(index)=>{
-  let newList=this.state.list
-  
-  newList.splice(index, 1)
-  this.setState({
-    list:newList
-  })
-  }
   
   likeSubmitter=(index)=>{
     let newList=this.state.list
@@ -80,15 +72,7 @@ removeItemFromList=(index)=>{
   }
   
   
-  markTaskCompleted=(index)=>{
-    let newList=this.state.list
-  
-    newList[index].completed=!newList[index].completed
-  
-    this.setState({
-      list: newList
-    })
-  }
+
 // AGregar funcion para dar like
 
   render() {
@@ -101,10 +85,7 @@ removeItemFromList=(index)=>{
         list={this.state.list}
         />
         
-        <Comments
-          listItems={this.state.list}
-          likeSubmitter={this.likeSubmitter}
-          />
+        
       </div>
       );
   }
