@@ -5,7 +5,7 @@ import About from './About';
 import View from './View'
 
 const Header = (props) => {
-  let {list, clickHandler} = props
+  let {list, clickHandler, likeSubmitter} = props
   console.log('Header props', props)
   return(
     <div>
@@ -31,7 +31,8 @@ const Header = (props) => {
           path={["/view/:id", "/unicorn/:id", "/view/:unicornio" ]}
           render={(props) => 
             <View {...props} 
-              list={list} clickHandler={clickHandler} 
+              list={list} clickHandler={clickHandler}
+				        likeSubmitter={likeSubmitter} 
             />}
         />
     </div>

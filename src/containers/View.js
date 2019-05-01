@@ -3,8 +3,9 @@ import Textarea from '../components/comments/Textarea'
 import Button from '../components/comments/Button'
 import Comments from '../containers/Comments'
 
+
 const View = (props) => {
-	let {list, inputHandler, clickHandler, taskValue} = props
+	let {list, inputHandler, clickHandler, taskValue, likeSubmitter} = props
 
 	console.log(props)
 	console.log(props.match.params.id);
