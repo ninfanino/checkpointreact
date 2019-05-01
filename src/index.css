@@ -1,3 +1,100 @@
+/*
+Imported google fonts
+font-family: 'Pacifico', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Bree Serif', serif;
+font-family: 'Marck Script', cursive;
+font-family: 'Handlee', cursive; */
+
 body {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Handlee', cursive;
+    margin: 0;
+}
+
+.cardItem {
+    background: #f6b1cf;
+    border: solid #b7a6d1 1px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.cardItem h2 {
+	color: #fff;
+}
+figure {
+	display: inline-block;
+	vertical-align: top;
+}
+figure img {
+	width: 300px;
+}
+.header {
+	background: #fadde9;
+	border-bottom: 1px solid #ee0fa1;
+}
+a {
+	text-decoration: none;
+	color: #ee0fa1;
+}
+a:hover {
+	color: #ce0d8b;
+}
+.logo-img {
+    width: 100px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.logo-name {
+	font-size: 20px;
+}
+.menu {
+	position: absolute;
+	right: 20px;
+	top: 35px;
+}
+.menu a {
+	margin-right: 10px;
+	text-decoration: none;
+}
+.isSelected{
+	font-weight: bold;
+}
+.home-intro {
+	padding: 0px 20px;
+}
+.home-intro.view {
+	margin-top: 20px;
+}
+object {
+	width: calc(100% - 450px);
+    height: 320px;
+}
+.button {
+    height: 40px;
+    width: 180px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background: #f0599b;
+    text-align: center;
+    cursor: pointer;
+}
+.button a {
+	color: #fff;
+	text-decoration: none;
+
+}
+.button:hover {
+	background: #f36ca7;
+}
+figure {
+	margin-left: 0px;
+}
+.textarea {
+	width: 100%;
+	height: 100px;
+	background: rgba(255,255,255,.6);
+	padding: 20px;
+	box-sizing: border-box;
 }
