@@ -6,7 +6,7 @@ const Button = (props) => {
   return (
     <button className="button" type="button" onClick={props.clickHandler}>
     {props.children}
-      Enviar
+  
     </button>
   )
 } 

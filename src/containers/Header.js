@@ -5,7 +5,7 @@ import About from './About';
 import View from './View'
 
 const Header = (props) => {
-  let {list, clickHandler, likeSubmitter} = props
+  let {list, clickHandler, likeSubmitter, updateTask, task, postComment} = props
   console.log('Header props', props)
   return(
     <div>
@@ -32,7 +32,11 @@ const Header = (props) => {
           render={(props) => 
             <View {...props} 
               list={list} clickHandler={clickHandler}
-				        likeSubmitter={likeSubmitter} 
+                likeSubmitter={likeSubmitter} 
+                taskValue={task}
+                inputHandler={updateTask}
+                postComment={postComment}
+
             />}
         />
     </div>

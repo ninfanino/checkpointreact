@@ -11,7 +11,7 @@ const Comments = (props) => {
 				<CommentItem 
 					key={index}
 					item={item}
-					likeSubmitter={()=>{likeSubmitter(index)}}
+					likeSubmitter={likeSubmitter}
 	 			 />
 			
 	)

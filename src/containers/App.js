@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   // Agregar función para añadir comentario
-addTaskToList=()=>{
+postComment=()=>{
   // add task to this.state.list
   if (this.state.task){
   let newList=this.state.list
@@ -83,6 +83,10 @@ addTaskToList=()=>{
         <Header 
         clickHandler={this.goToView}
         list={this.state.list}
+        task={this.state.task}
+        likeSubmitter={this.likeSubmitter}
+        updateTask={this.updateTask}
+        postComment={this.postComment}
         />
         
         

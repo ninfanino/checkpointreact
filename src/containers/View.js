@@ -5,7 +5,7 @@ import Comments from '../containers/Comments'
 
 
 const View = (props) => {
-	let {list, inputHandler, clickHandler, taskValue, likeSubmitter} = props
+	let {list, inputHandler, clickHandler, taskValue, likeSubmitter, postComment} = props
 
 	console.log(props)
 	console.log(props.match.params.id);
@@ -19,17 +19,16 @@ const View = (props) => {
       <h2>{item.unicorn}</h2>
       <figure>
         <img src={item.image} 
-        />
-      </figure>
-      <object data={item.text}></object>
-			<div>
+    		    />
+      	</figure>
+      	<object data={item.text}></object>
+				<div>
 				<h2>Deja tu comentario:</h2>
 				<Textarea
 				inputHandler={inputHandler}
         taskValue={taskValue}/>
-				<Button clickHandler={clickHandler}>
-          
-				
+				<Button clickHandler={postComment}>
+          Enviar
 				</Button>
 
 				<Comments 
